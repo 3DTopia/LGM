@@ -1,0 +1,27 @@
+torch
+numpy
+tyro
+diffusers
+dearpygui
+einops
+accelerate
+gradio
+imageio
+imageio-ffmpeg
+lpips
+matplotlib
+packaging
+Pillow
+pygltflib
+rembg[gpu,cli]
+rich
+safetensors
+scikit-image
+scikit-learn
+scipy
+tqdm
+transformers
+trimesh
+kiui >= 0.2.3
+xatlas
+roma
