@@ -3,7 +3,7 @@
 
 This is the official implementation of *LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation*.
 
-### [Project Page](https://me.kiui.moe/lgm/) | [Arxiv](TODO)
+### [Project Page](https://me.kiui.moe/lgm/) | [Arxiv](https://arxiv.org/abs/2402.05054) | [Weights](https://huggingface.co/ashawkey/LGM) | [Demo (Soon)](TODO)
 
 https://github.com/3DTopia/LGM/assets/25863658/cf64e489-29f3-4935-adba-e393a24c26e8
 
@@ -90,7 +90,7 @@ This work is built on many amazing research works and open-source projects, than
 @article{tang2024lgm,
   title={LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation},
   author={Tang, Jiaxiang and Chen, Zhaoxi and Chen, Xiaokang and Wang, Tengfei and Zeng, Gang and Liu, Ziwei},
-  journal={arXiv preprint arXiv:TODO},
+  journal={arXiv preprint arXiv:2402.05054},
   year={2024}
 }
 ```
