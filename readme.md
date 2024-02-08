@@ -3,7 +3,7 @@
 
 This is the official implementation of *LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation*.
 
-### [Project Page](https://me.kiui.moe/lgm/) | [Arxiv](https://arxiv.org/abs/2402.05054) | [Weights](https://huggingface.co/ashawkey/LGM) | [Demo (Soon)](TODO)
+### [Project Page](https://me.kiui.moe/lgm/) | [Arxiv](https://arxiv.org/abs/2402.05054) | [Weights](https://huggingface.co/ashawkey/LGM) | <a href="https://huggingface.co/spaces/ashawkey/LGM"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a>
 
 https://github.com/3DTopia/LGM/assets/25863658/cf64e489-29f3-4935-adba-e393a24c26e8
 
