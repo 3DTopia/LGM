@@ -83,6 +83,7 @@ This work is built on many amazing research works and open-source projects, than
 - [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting) and [diff-gaussian-rasterization](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
 - [nvdiffrast](https://github.com/NVlabs/nvdiffrast)
 - [dearpygui](https://github.com/hoffstadt/DearPyGui)
+- [tyro](https://github.com/brentyi/tyro)
 
 ### Citation
 
