@@ -9,16 +9,16 @@ class Options:
     # Unet image input size
     input_size: int = 256
     # Unet definition
-    down_channels: Tuple[int] = (64, 128, 256, 512, 1024, 1024)
-    down_attention: Tuple[bool] = (False, False, False, True, True, True)
+    down_channels: Tuple[int, ...] = (64, 128, 256, 512, 1024, 1024)
+    down_attention: Tuple[bool, ...] = (False, False, False, True, True, True)
     mid_attention: bool = True
-    up_channels: Tuple[int] = (1024, 1024, 512, 256)
-    up_attention: Tuple[bool] = (True, True, True, False)
+    up_channels: Tuple[int, ...] = (1024, 1024, 512, 256)
+    up_attention: Tuple[bool, ...] = (True, True, True, False)
     # Unet output size, dependent on the input_size and U-Net structure!
     splat_size: int = 64
     # gaussian render size
     output_size: int = 256
-    
+
     ### dataset
     # data mode (only support s3 now)
     data_mode: Literal['s3'] = 's3'
@@ -40,7 +40,7 @@ class Options:
     ### training
     # workspace
     workspace: str = './workspace'
-    # resume 
+    # resume
     resume: Optional[str] = None
     # batch size (per-GPU)
     batch_size: int = 8

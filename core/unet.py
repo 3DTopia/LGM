@@ -3,10 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 import numpy as np
-from typing import Tuple, Optional, Literal
+from typing import Tuple, Literal
 from functools import partial
 
-from core.attention import MemEffAttention, MemEffCrossAttention
+from core.attention import MemEffAttention
 
 class MVAttention(nn.Module):
     def __init__(
@@ -236,11 +236,11 @@ class UNet(nn.Module):
         self,
         in_channels: int = 3,
         out_channels: int = 3,
-        down_channels: Tuple[int] = (64, 128, 256, 512, 1024),
-        down_attention: Tuple[bool] = (False, False, False, True, True),
+        down_channels: Tuple[int, ...] = (64, 128, 256, 512, 1024),
+        down_attention: Tuple[bool, ...] = (False, False, False, True, True),
         mid_attention: bool = True,
-        up_channels: Tuple[int] = (1024, 512, 256),
-        up_attention: Tuple[bool] = (True, True, False),
+        up_channels: Tuple[int, ...] = (1024, 512, 256),
+        up_attention: Tuple[bool, ...] = (True, True, False),
         layers_per_block: int = 2,
         skip_scale: float = np.sqrt(0.5),
     ):
