@@ -68,6 +68,8 @@ For more options, please check [options](./core/options.py).
 Since the dataset used in our training is based on AWS, it cannot be directly used for training in a new environment.
 We provide the necessary training code framework, please check and modify the [dataset](./core/provider_objaverse.py) implementation!
 
+We also provide the **~80K subset of [Objaverse](https://objaverse.allenai.org/objaverse-1.0)** used to train LGM in [objaverse_filter](https://github.com/ashawkey/objaverse_filter).
+
 ```bash
 # debug training
 accelerate launch --config_file acc_configs/gpu1.yaml main.py big --workspace workspace_debug
