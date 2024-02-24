@@ -80,7 +80,7 @@ class Converter(nn.Module):
 
         # nerf renderer
         if not self.opt.force_cuda_rast:
-            self.glctx = dr.RasterizeGLContext()
+            self.glctx = dr.RasterizeCudaContext()
         else:
             self.glctx = dr.RasterizeCudaContext()
         
@@ -459,4 +459,4 @@ converter = Converter(opt).cuda()
 converter.fit_nerf()
 converter.fit_mesh()
 converter.fit_mesh_uv()
-converter.export_mesh(opt.test_path.replace('.ply', '.glb'))
+converter.export_mesh("content/output_final.glb")
