@@ -131,11 +131,16 @@ class GaussianRenderer:
         opacities = opacity.detach().cpu().numpy()
         scales = scales.detach().cpu().numpy()
         rotations = rotations.detach().cpu().numpy()
+        normals=torch.zeros((xyzs.shape[0],3))
+        f_rest=torch.zeros((xyzs.shape[0],45))
 
         l = ['x', 'y', 'z']
+        l.extend(['nx', 'ny', 'nz'])
         # All channels except the 3 DC
         for i in range(f_dc.shape[1]):
             l.append('f_dc_{}'.format(i))
+        for i in range(45):
+            l.append(f"f_rest_{i}")
         l.append('opacity')
         for i in range(scales.shape[1]):
             l.append('scale_{}'.format(i))
@@ -145,7 +150,7 @@ class GaussianRenderer:
         dtype_full = [(attribute, 'f4') for attribute in l]
 
         elements = np.empty(xyzs.shape[0], dtype=dtype_full)
-        attributes = np.concatenate((xyzs, f_dc, opacities, scales, rotations), axis=1)
+        attributes = np.concatenate((xyzs,normals, f_dc, f_rest, opacities, scales, rotations), axis=1)
         elements[:] = list(map(tuple, attributes))
         el = PlyElement.describe(elements, 'vertex')
 
