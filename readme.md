@@ -7,11 +7,17 @@ This is the official implementation of *LGM: Large Multi-View Gaussian Model for
 
 https://github.com/3DTopia/LGM/assets/25863658/cf64e489-29f3-4935-adba-e393a24c26e8
 
+### Notice
+Thanks to [@yxymessi](https://github.com/yxymessi), we have found that there is a **severe bug in rotation normalization** [here](https://github.com/3DTopia/LGM/blob/main/core/models.py#L43).
+However, the current model is trained with this wrong code and correcting it leads to some quality degradation. We will work on retraining a correct model in the future.
+
+**If you are going to retrain a model, please correct it to `self.rot_act = lambda x: F.normalize(x, dim=-1)`** !
+
 ### Replicate Demo:
 * gaussians: [demo](https://replicate.com/camenduru/lgm) | [code](https://github.com/camenduru/LGM-replicate)
 * mesh: [demo](https://replicate.com/camenduru/lgm-ply-to-glb) | [code](https://github.com/camenduru/LGM-ply-to-glb-replicate)
 
-Thanks [@camenduru](https://github.com/camenduru)!
+Thanks to [@camenduru](https://github.com/camenduru)!
 
 ### Install
 
