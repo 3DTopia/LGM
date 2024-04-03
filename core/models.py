@@ -40,7 +40,7 @@ class LGM(nn.Module):
         self.pos_act = lambda x: x.clamp(-1, 1)
         self.scale_act = lambda x: 0.1 * F.softplus(x)
         self.opacity_act = lambda x: torch.sigmoid(x)
-        self.rot_act = F.normalize
+        self.rot_act = lambda x: F.normalize(x, dim=-1)
         self.rgb_act = lambda x: 0.5 * torch.tanh(x) + 0.5 # NOTE: may use sigmoid if train again
 
         # LPIPS loss
