@@ -26,7 +26,7 @@ pip install -U xformers --index-url https://download.pytorch.org/whl/cu118
 
 # a modified gaussian splatting (+ depth, alpha rendering)
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
-pip install ./diff-gaussian-rasterization
+pip install ./diff-gaussian-rasterization --no-build-isolation
 
 # for mesh extraction
 pip install git+https://github.com/NVlabs/nvdiffrast
