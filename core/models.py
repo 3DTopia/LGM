@@ -135,9 +135,9 @@ class LGM(nn.Module):
         bg_color = torch.ones(3, dtype=torch.float32, device=gaussians.device)
         
         # use the other views for rendering and supervision
-        results = self.gs.render(gaussians, data['cam_view'], data['cam_view_proj'], data['cam_pos'], bg_color=bg_color)
-        pred_images = results['image'] # [B, V, C, output_size, output_size]
-        pred_alphas = results['alpha'] # [B, V, 1, output_size, output_size]
+        rendered_results = self.gs.render(gaussians, data['cam_view'], data['cam_view_proj'], data['cam_pos'], bg_color=bg_color)
+        pred_images = rendered_results['image'] # [B, V, C, output_size, output_size]
+        pred_alphas = rendered_results['alpha'] # [B, V, 1, output_size, output_size]
 
         results['images_pred'] = pred_images
         results['alphas_pred'] = pred_alphas
